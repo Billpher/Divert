@@ -1,0 +1,38 @@
+@use 'variaveis';
+
+.footer {
+    padding: 26px 8px;
+    background-color: black;
+
+    &__container {
+        width: 1024px;
+        margin: 0 auto;
+        text-align: center;
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+
+        &__links {
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+            &__item {
+                list-style: none;
+                display: inline-block;
+                font-size: 12px;
+
+                a {
+                    display: block;
+                    text-decoration: none;
+                    padding: 8px;
+                    color: variaveis.$corDoTitulo;
+                }
+            }
+        }
+    }
+}

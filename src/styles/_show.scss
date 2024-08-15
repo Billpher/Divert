@@ -1,0 +1,108 @@
+.show {
+    width: 99vw;
+    padding: 0 72px;
+
+    &__apresentacao {
+        margin-bottom: 60px;
+
+        img {
+            width: 30%;
+        }
+
+        &__indicacao {
+            margin-bottom: 32px;
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        p {
+            width: 800px;
+            margin: 18px 0;
+            line-height: 1.4;
+            letter-spacing: 0;
+        }
+    }
+
+    &__detalhes {
+        h1 {
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600px;
+            padding: 0 0 15px;
+        }
+
+        h2 {
+            margin: 14px 0;
+        }
+
+        &__filme {
+            display: flex;
+            gap: 12px;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            
+            &__sinopse {
+                width: 50%;
+                padding-right: 12px;
+            }
+    
+            &__dados {
+                width: 50%;
+                display: flex;
+                gap: 100px;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                li {
+                    display: flex;
+                    flex-direction: column;
+                    padding-bottom: 16px;
+                    list-style: none;
+                }
+
+                .producao {
+                    margin-left: 60px;
+
+                    li {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__gosto {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 60px;
+
+        &__indicacao {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            
+            img {
+                width: 300px;
+                border-radius: 20px;
+                transition: 
+                    box-shadow 300ms ease-out, 
+                    border 300ms ease 6ms, 
+                    border-radius 300ms ease 6ms, 
+                    transform 300ms ease-out;
+
+                &:hover {
+                    box-shadow: 0px 0px 99px 28px rgba(0, 0, 0, 0.3);
+                    border: 4px solid rgba(235, 195, 143, 1);
+                    border-radius: 20px;
+                    transform: translate(0px, 0px) scale(1.1, 1.1);
+                }
+            }
+        }
+    }
+}
