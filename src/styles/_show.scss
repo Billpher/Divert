@@ -1,106 +1,146 @@
+@use 'variaveis';
+
 .show {
-    width: 99vw;
-    padding: 0 72px;
+    max-width: 100vw;
+    padding: 0 54px;
+    padding-bottom: 20px;
 
-    &__apresentacao {
-        margin-bottom: 60px;
+    .livre {
+        width: 20px;
+        height: 20px;
+    }
 
-        img {
-            width: 30%;
+    h1 {
+        color: variaveis.$textoTitulo;
+        font-weight: 700px;
+        padding-bottom: 14px;
+    }
+
+    &__resumo {
+        width: 100%;
+        display: block;
+        color: variaveis.$textoSpan;
+
+        &__logo {
+            max-width: 300px;
+            height: auto;
+            padding: 56px 0 12px;
         }
 
-        &__indicacao {
-            margin-bottom: 32px;
+        &__classificacao {
+            display: block;
 
-            img {
-                width: 20px;
+            .cc {
+                width: 27px;
                 height: 20px;
-            }
+            }     
+        }
+
+        .button {
+            margin-top: 32px;
         }
 
         p {
-            width: 800px;
             margin: 18px 0;
-            line-height: 1.4;
-            letter-spacing: 0;
         }
     }
 
     &__detalhes {
-        h1 {
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-weight: 600px;
-            padding: 0 0 15px;
-        }
+        width: 100%;
+        display: block;
 
         h2 {
+            text-transform: uppercase;
+            color: white;
+            letter-spacing: 1.7px;
+        }
+
+        hr {
+            border: 1px solid hsla(0,0%,98%,.2);
             margin: 14px 0;
         }
 
-        &__filme {
+        &__info {
             display: flex;
-            gap: 12px;
-            flex-wrap: nowrap;
+            flex-direction: row;
             justify-content: space-between;
-            
-            &__sinopse {
-                width: 50%;
-                padding-right: 12px;
+            flex-wrap: nowrap;
+            gap: 12px;
+
+            @media (max-width: 768px) {
+                display: block;
             }
-    
-            &__dados {
-                width: 50%;
+
+            &__sinopse {
+                width: 100%;
+                padding-right: 12px;
+                max-width: 767px;
+
+                p {
+                    color: variaveis.$textoTitulo;
+                    margin: 0;
+                }
+            }
+            
+            &__metadata {
+                width: 100%;
+                padding-left: 12px;
+                gap: 15px;
                 display: flex;
-                gap: 100px;
+                flex-direction: row;
+                align-self: end;
+                padding-bottom: 16px;
 
-                img {
-                    width: 20px;
-                    height: 20px;
+                @media (max-width: 768px) {
+                    margin-top: 20px;
+                    padding-left: 0;
                 }
 
-                li {
-                    display: flex;
-                    flex-direction: column;
-                    padding-bottom: 16px;
-                    list-style: none;
+                span {
+                    color: variaveis.$textoSpan;
                 }
 
-                .producao {
-                    margin-left: 60px;
+                p {
+                    color: variaveis.$textoTitulo;
+                    padding-top: 5px;
+                }
 
-                    li {
-                        margin-bottom: 5px;
-                    }
+                &__dados {
+                    flex: 1 1;
                 }
             }
         }
     }
 
-    &__gosto {
+    &__recomendacao {
         width: 100%;
-        height: 100%;
-        margin-bottom: 60px;
+        display: block;
+        padding-top: 50px;
 
-        &__indicacao {
-            margin-top: 20px;
+        &__container {
             display: flex;
-            justify-content: space-between;
-            
-            img {
-                width: 300px;
-                border-radius: 20px;
-                transition: 
-                    box-shadow 300ms ease-out, 
-                    border 300ms ease 6ms, 
-                    border-radius 300ms ease 6ms, 
-                    transform 300ms ease-out;
+            gap: 20px;
 
-                &:hover {
-                    box-shadow: 0px 0px 99px 28px rgba(0, 0, 0, 0.3);
-                    border: 4px solid rgba(235, 195, 143, 1);
-                    border-radius: 20px;
-                    transform: translate(0px, 0px) scale(1.1, 1.1);
+            @media (max-width: 768px) {
+                display: block;
+            }
+
+            &__item {
+                cursor: pointer;
+
+                img {
+                    max-width: 500px;
+                    width: 100%;
+                    transition: transform 0.5s ease-in-out, box-shadow 0.5s;
+
+                    &:hover {
+                        box-shadow: 0px 0px 54px 14px rgba(224,97,97,0.63);
+                        transform: scale(1.08);
+                    }
+
+                    @media (max-width: 768px) {
+                        margin-top: 20px;
+                    }
                 }
             }
         }
